@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Vendas</title>
+</h:head>
+<h:body>
+	<h2>Lista de Fornecedores</h2>
+	<h:form>
+		<p:dataTable value="#{fornecedorBean.fornecedors}" var="fornecedor" border="1">
+			<p:column>
+				<f:facet name="header">
+Razão Social:
+</f:facet>
+#{fornecedor.razaosocial}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Nome Fantasia:
+</f:facet>
+#{fornecedor.nomefantasia}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Endereço:
+</f:facet>
+#{fornecedor.endereco}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Bairro:
+</f:facet>
+#{fornecedor.bairro}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cidade:
+</f:facet>
+#{fornecedor.cidade}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Complemento:
+</f:facet>
+#{fornecedor.complemento}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cep:
+</f:facet>
+#{fornecedor.cep}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Uf:
+</f:facet>
+#{fornecedor.uf}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cnpj:
+</f:facet>
+#{fornecedor.cnpj}
+</p:column>
+<p:column>
+				<f:facet name="header">
+E-mail:
+</f:facet>
+#{fornecedor.email}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Telefone:
+</f:facet>
+#{fornecedor.telefone}
+</p:column>
+			<p:column>
+				<f:facet name="header">Excluir</f:facet>
+				<p:commandLink action="#{fornecedorBean.excluir(fornecedor)}">
+</p:commandLink>
+
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>

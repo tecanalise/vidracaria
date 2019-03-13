@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Vendas</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
+	<h:form>
+	<p:panel header="Lista de Funcionários">
+  <p:messages />
+   <table width="500" align="center">
+                                <tr>
+                                    <td colspan="2" align="center"><h:outputText value="Informe o nome do funcionário a ser pesquisado" /></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><h:inputText  value="#{funcionarioBean.funcionario.nome}" /></td>
+                                    <td align="left"><h:commandButton value="Pesquisar" action="#{funcionarioBean.busca}"></h:commandButton></td>
+                                </tr>
+                            </table>
+		<p:dataTable value="#{funcionarioBean.funcionarios}" var="funcionario" border="1">
+			<p:column>
+				<f:facet name="header">
+Nome:
+</f:facet>
+#{funcionario.nome}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Endereço:
+</f:facet>
+#{funcionario.endereco}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cpf:
+</f:facet>
+#{funcionario.cpf}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Bairro:
+</f:facet>
+#{funcionario.bairro}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cidade:
+</f:facet>
+#{funcionario.cidade}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Uf:
+</f:facet>
+#{funcionario.uf}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Cep:
+</f:facet>
+#{funcionario.cep}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Telefone:
+</f:facet>
+#{funcionario.telefone}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Contato:
+</f:facet>
+#{funcionario.contato}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Comissao:
+</f:facet>
+#{funcionario.comissao}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Complemento:
+</f:facet>
+#{funcionario.complemento}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Rg:
+</f:facet>
+#{funcionario.rg}
+</p:column>
+			<p:column>
+				<f:facet name="header">
+E-mail:
+</f:facet>
+#{funcionario.email}
+</p:column>
+			<p:column>
+				<f:facet name="header">Excluir</f:facet>
+				<p:commandLink action="#{funcionarioBean.excluir(funcionario)}">
+    Excluir
+</p:commandLink>
+
+			</p:column>
+		</p:dataTable>
+		</p:panel>
+	</h:form>
+	</div>
+	</div>
+	</ui:define>
+	</ui:composition>	
+</h:body>
+</html>

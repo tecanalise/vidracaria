@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+      
+<head>
+</head>
+    <body>
+        <ui:composition>
+        <div id="cabecalho" align="center">
+ <h:graphicImage url="panda.jpg" width="160px" heigth="500px" />
+ </div>
+  <div id="menu">
+  <h:form>  
+    <p:growl id="messages" showDetail="true"/>
+ 
+    <p:menubar>
+            <p:submenu label="Cliente" icon="pi pi-save">
+            <p:menuitem value="Listar Clientes" url="listaCliente.xhtml" />
+            <p:menuitem value="Cadastro de Clientes" url="cliente.xhtml" />
+             <p:menuitem value="Relatório de Clientes" url="#" />
+        </p:submenu>
+ 
+         <p:submenu label="Funcionário" icon="pi pi-save">
+            <p:menuitem value="Listar Funcionários" url="listaFuncionario.xhtml" />
+            <p:menuitem value="Cadastro de Funcionários" url="funcionario.xhtml" />
+            <p:menuitem value="Cadastro de Usuários" url="usuario.xhtml" />
+             <p:menuitem value="Relatório de Funcionário" url="#" />
+        </p:submenu>
+        <p:submenu label="Produto" icon="pi pi-save">
+            <p:menuitem value="Listar Preços" url="listaPreco.xhtml" />
+            <p:menuitem value="Listar Produtos" url="listaProduto.xhtml" />
+            <p:menuitem value="Cadastro de Produtos" url="produto.xhtml" />
+             <p:menuitem value="Cadastro de Produto Fornecedor" url="produtofornecedor.xhtml" />
+             <p:menuitem value="Relatório de Produto " url="#" />
+        </p:submenu>
+        <p:submenu label="Fornecedor" icon="pi pi-save">
+            <p:menuitem value="Consultar Fornecedores" url="#" />
+            <p:menuitem value="Cadastrar Fornecedores" url="fornecedor.xhtml" />
+            <p:menuitem value="Relatório Fornecedor" url="#" />
+        </p:submenu>
+        <p:submenu label="Financeiro" icon="pi pi-save">
+            <p:menuitem value="Buscar Forma de Pagamento" url="#" />
+            <p:menuitem value="Cadastrar Forma de Pagamento" url="formpagamento.xhtml" />
+            <p:menuitem value="Cadastrar Pagamento" url="pagamento.xhtml" />
+            <p:menuitem value="Cadastrar Movimento" url="movimento.xhtml" />
+            <p:menuitem value="Cadastrar Venda por Vendedor" url="vendporvendedor.xhtml" />
+            <p:menuitem value="Relatório Movimento" url="#" />
+            <p:menuitem value="Cadastrar Saída Dinheiro" url="saidadinheiro.xhtml" />
+            <p:menuitem value="Efetuar Venda" url="#" />
+            <p:menuitem value="Relatório de Venda" url="#" />
+            <p:menuitem value="Relatório Venda Vendedor" url="#" />
+        </p:submenu>
+         <p:submenu label="Compras" icon="pi pi-save">
+            <p:menuitem value="Consultar Compras" url="#" />
+            <p:menuitem value="Cadastrar Compras" url="compra.xhtml" />
+            <p:menuitem value="Relatório Compra" url="#" />
+        </p:submenu>
+         <p:submenu label="Servico" icon="pi pi-save">
+            <p:menuitem value="Confirmar Serviços" url="#" />
+            <p:menuitem value="Cadastrar Medidas" url="compra.xhtml" />
+            <p:menuitem value="Cadastrar Orçamento" url="#" />
+            <p:menuitem value="Relatório Medida" url="#" />
+        </p:submenu>
+        <p:submenu label="Contas" icon="pi pi-save">
+            <p:menuitem value="Cadastrar Contas a Pagar" url="#" />
+            <p:menuitem value="Cadastrar Contas a Receber" url="#" />
+            <p:menuitem value="Relatório Contas a Receber" url="#" />
+            <p:menuitem value="Relatório Contas a Pagar" url="#" />
+        </p:submenu>
+            <f:facet name="options">
+            <p:commandButton value="logout" action = "#{LoginMB.logout}" icon="pi pi-home"/>
+        </f:facet>
+    </p:menubar>
+</h:form>
+</div>
+        </ui:composition>
+    </body>
+</html>

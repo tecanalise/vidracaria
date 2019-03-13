@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Sistema de Vendas</title>
+</h:head>
+<h:body>
+<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
+<h:form>
+<p:panel header="Cadastro de Funcionários">
+  <p:messages />
+<p:panelGrid columns = "2" columnClasses="label, value">
+<h:outputText value="Nome: "/>
+<p:inputText value = "#{funcionarioBean.funcionario.nome}" size="50"/>
+<h:outputText value="Endereço: "/>
+<p:inputText value="#{funcionarioBean.funcionario.endereco}" size="50"/>
+<h:outputText value="Telefone: "/>
+<p:inputText value="#{funcionarioBean.funcionario.telefone}" size="30"/>
+<h:outputText value="Contato: "/>
+<p:inputText value="#{funcionarioBean.funcionario.contato}" size="30"/>
+<h:outputText value="Comissão: "/>
+<p:inputText value="#{funcionarioBean.funcionario.comissao}" size="10"/>
+<h:outputText value="Bairro: "/>
+<p:inputText value="#{funcionarioBean.funcionario.bairro}" size="30"/>
+<h:outputText value="Cidade: "/>
+<p:inputText value="#{funcionarioBean.funcionario.cidade}" size="30"/>
+<h:outputText value="Uf: "/>
+<p:inputText value="#{funcionarioBean.funcionario.uf}" size="10"/>
+<h:outputText value="Cep: "/>
+<p:inputText value="#{funcionarioBean.funcionario.cep}" size="30"/>
+<h:outputText value="Complemento: "/>
+<p:inputText value="#{funcionarioBean.funcionario.complemento}" size="30"/>
+<h:outputText value="Rg: "/>
+<p:inputText value="#{funcionarioBean.funcionario.rg}" size="30"/>
+<h:outputText value="E-mail: "/>
+<p:inputText value="#{funcionarioBean.funcionario.email}" size="50"/>
+<p:commandButton value="Salvar" action = "#{funcionarioBean.salva}"/>
+</p:panelGrid>
+</p:panel>
+</h:form> 
+</div>
+</div>
+</ui:define>
+</ui:composition>
+</h:body>
+</html>

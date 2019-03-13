@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Vendas</title>
+</h:head>
+<h:body>
+<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
+	<h:form>
+	<p:panel header="Lista de Produtos">
+  <p:messages />
+    <table width="500" align="center">
+                                <tr>
+                                    <td colspan="2" align="center"><h:outputText value="Informe o nome do usuário a ser pesquisado" /></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><h:inputText  value="#{produtoBean.produto.categoria}" /></td>
+                                    <td align="left"><h:commandButton value="Pesquisar" action="#{produtoBean.busca}"></h:commandButton></td>
+                                </tr>
+                            </table>
+		<p:dataTable value="#{produtoBean.produtos}" var="produto" border="1">
+			<p:column>
+				<f:facet name="header">
+Referência:
+</f:facet>
+#{produto.referencia}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Fornecedor:
+</f:facet>
+#{produto.fornecedor}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Produto:
+</f:facet>
+#{produto.produto}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Marca:
+</f:facet>
+#{produto.marca}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Categoria:
+</f:facet>
+#{produto.categoria}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Estoque:
+</f:facet>
+#{produto.estoque}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Valor:
+</f:facet>
+#{produto.valor}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Telefone:
+</f:facet>
+#{cliente.telefone}
+</p:column>
+			<p:column>
+				<f:facet name="header">Excluir</f:facet>
+				<p:commandLink action="#{produtoBean.excluir(produto)}">
+    Excluir
+</p:commandLink>
+
+			</p:column>
+		</p:dataTable>
+		</p:panel>
+	</h:form>
+	</div>
+	</div>
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

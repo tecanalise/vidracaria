@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+#userInfo {
+	background: #2a2948;
+	position: absolute;
+	z-index: 99999;
+	top: 0;
+	right: 0;
+	padding: 2px 10px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#userInfo p {
+	text-align: right;
+	color: white;
+	padding: 3px;
+}
+#userInfo a {
+	color: white;	
+}
+#userInfo a:hover {
+	color: yellow;	
+}
+/*language bar*/

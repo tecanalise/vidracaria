@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Sistema de Vidraçaria</title>
+</h:head>
+<h:body>
+	<h2>Lista de Formas de Pagamento</h2>
+	<h:form>
+		<p:dataTable value="#{formpagamentoBean.formpagamentos}" var="formpagamento" border="1">
+			<p:column>
+				<f:facet name="header">
+Tipo:
+</f:facet>
+#{formpagamento.tipo}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Descrição:
+</f:facet>
+#{formpagamento.descricao}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Prazo:
+</f:facet>
+#{formpagamento.prazo}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Peso Comercial:
+</f:facet>
+#{formpagamento.pesocomercial}
+</p:column>
+<p:column>
+				<f:facet name="header">
+Peso Desconto:
+</f:facet>
+#{formpagamento.pesodesconto}
+</p:column>
+			<p:column>
+				<f:facet name="header">Excluir</f:facet>
+				<p:commandLink action="#{formpagamentoBean.excluir(formpagamento)}">
+    Excluir
+</p:commandLink>
+
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
