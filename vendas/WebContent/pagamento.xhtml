@@ -10,20 +10,26 @@
 <title>Sistema de Vidraçaria</title>
 </h:head>
 <h:body>
-<h2>Cadastro de Pagamento</h2>
 <ui:composition template="layout.xhtml">
 <ui:define name="content">
+<div id="container">
+<div align="center" >
 <h:form>
+<p:panel header="Cadastro de Pagamentos">
+  <p:messages />
 <p:panelGrid columns = "2">
 <h:outputText value="Nome do Cliente: "/>
-<p:inputText value = "#{pagamentoBean.pagamento.nome}"/>
+<p:inputText value = "#{pagamentoBean.pagamento.nome}" size="50"/>
 <h:outputText value="Situação: "/>
-<p:inputText value="#{pagamentoBean.pagamento.situacao}"/>
+<p:inputText value="#{pagamentoBean.pagamento.situacao}" size="50"/>
 <h:outputText value="Valor Orçamento: "/>
-<p:inputText value="#{pagamentoBean.pagamento.valor}"/>
+<p:inputText value="#{pagamentoBean.pagamento.valor}" size="10"/>
 <p:commandButton value="Salvar" action = "#{pagamentoBean.salva}"/>
 </p:panelGrid>
-</h:form> 
+</p:panel>
+</h:form>
+</div>
+</div> 
 </ui:define>
 </ui:composition>
 </h:body>

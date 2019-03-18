@@ -9,36 +9,42 @@
 <title>Sistema de Vendas</title>
 </h:head>
 <h:body>
-<h2>Cadastro de Fornecedor</h2>
 <ui:composition template="layout.xhtml">
 <ui:define name="content">
+<div id="container">
+<div align="center" >
 <h:form>
+<p:panel header="Cadastro de Fornecedores">
+  <p:messages />
 <p:panelGrid columns = "2">
 <h:outputText value="Razão Social: "/>
-<p:inputText value = "#{fornecedorBean.fornecedor.razaosocial}"/>
+<p:inputText value = "#{fornecedorBean.fornecedor.razaosocial}" size="80"/>
 <h:outputText value="Nome Fantasia: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.nomefantasia}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.nomefantasia}" size="80"/>
 <h:outputText value="Endereço: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.endereco}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.endereco}" size="80"/>
 <h:outputText value="Bairro: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.bairro}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.bairro}" size="50"/>
 <h:outputText value="Cidade: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.cidade}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.cidade}" size="50"/>
 <h:outputText value="Complemento: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.complemento}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.complemento}" size="50"/>
 <h:outputText value="Cep: "/>
 <p:inputText value="#{fornecedorBean.fornecedor.cep}"/>
 <h:outputText value="Uf: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.uf}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.uf}" size="10"/>
 <h:outputText value="Cnpj: "/>
 <p:inputText value="#{fornecedorBean.fornecedor.cnpj}"/>
 <h:outputText value="E-mail: "/>
-<p:inputText value="#{fornecedorBean.fornecedor.email}"/>
+<p:inputText value="#{fornecedorBean.fornecedor.email}" size="50"/>
 <h:outputText value="Telefone: "/>
 <p:inputText value="#{fornecedorBean.fornecedor.telefone}"/>
 <p:commandButton value="Salvar" action = "#{fornecedorBean.salva}"/>
 </p:panelGrid>
+</p:panel>
 </h:form> 
+</div>
+</div>
 </ui:define>
 </ui:composition>
 </h:body>

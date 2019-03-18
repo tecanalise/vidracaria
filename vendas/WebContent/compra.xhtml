@@ -10,18 +10,24 @@
 <title>Sistema de Vidraçaria</title>
 </h:head>
 <h:body>
-<h2>Cadastro de Compras</h2>
 <ui:composition template="layout.xhtml">
 <ui:define name="content">
+<div id="container">
+<div align="center" >
 <h:form>
+<p:panel header="Cadastro de Compras">
+  <p:messages />
 <p:panelGrid columns = "2">
 <h:outputText value="Descrição: "/>
-<p:inputText value = "#{compraBean.compra.descricao}"/>
+<p:inputText value = "#{compraBean.compra.descricao}" size="50"/>
 <h:outputText value="Valor: "/>
-<p:inputText value="#{compraBean.compra.valor}"/>
+<p:inputText value="#{compraBean.compra.valor}" size="10"/>
 <p:commandButton value="Salvar" action = "#{compraBean.salva}"/>
 </p:panelGrid>
+</p:panel>
 </h:form> 
+</div>
+</div>
 </ui:define>
 </ui:composition>
 </h:body>

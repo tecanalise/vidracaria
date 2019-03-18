@@ -3,14 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Sistema de Vidraçaria</title>
 </h:head>
 <h:body>
-	<h2>Lista de Formas de Pagamento</h2>
+	<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
 	<h:form>
+	<p:panel header="Lista de Formas de Pagamento">
+  <p:messages />
 		<p:dataTable value="#{formpagamentoBean.formpagamentos}" var="formpagamento" border="1">
 			<p:column>
 				<f:facet name="header">
@@ -50,6 +56,11 @@ Peso Desconto:
 
 			</p:column>
 		</p:dataTable>
+		</p:panel>
 	</h:form>
+	</div>
+	</div>
+	</ui:define>
+	</ui:composition>
 </h:body>
 </html>
