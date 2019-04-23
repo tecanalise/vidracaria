@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Sistema de Vendas</title>
+</h:head>
+<h:body>
+<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
+<h:form>
+ <p:panel header="Cadastro de Clientes">
+  <p:messages />
+<p:panelGrid columns="2" columnClasses="label, value">
+<h:outputText value="Nome: "/>
+<p:inputText value = "#{clienteBean.cliente.nome}" required="true" label="Nome" size="50"/>
+<h:outputText value="Endereço: "/>
+<p:inputText value="#{clienteBean.cliente.endereco}" size="50"/>
+<h:outputText value="Telefone: "/>
+<p:inputText value="#{clienteBean.cliente.telefone}"/>
+<h:outputText value="Bairro: "/>
+<p:inputText value="#{clienteBean.cliente.bairro}"/>
+<h:outputText value="Cidade: "/>
+<p:inputText value="#{clienteBean.cliente.cidade}"/>
+<h:outputText value="Cpf: "/>
+<p:inputText value="#{clienteBean.cliente.cpf}"/>
+<h:outputText value="Uf: "/>
+<p:inputText value="#{clienteBean.cliente.uf}" size="10"/>
+<h:outputText value="Cep: "/>
+<p:inputText value="#{clienteBean.cliente.cep}"/>
+<h:outputText value="Complemento: "/>
+<p:inputText value="#{clienteBean.cliente.complemento}"/>
+<h:outputText value="Rg: "/>
+<p:inputText value="#{clienteBean.cliente.rg}"/>
+<h:outputText value="E-mail: "/>
+<p:inputText value="#{clienteBean.cliente.email}" size="50"/>
+<p:commandButton value="Salvar" action = "#{clienteBean.salva}"/>
+</p:panelGrid>
+</p:panel>
+</h:form> 
+</div>
+</div>
+</ui:define>
+</ui:composition>
+</h:body>
+</html>
