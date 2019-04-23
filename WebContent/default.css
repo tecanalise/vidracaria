@@ -1,0 +1,128 @@
+
+body {
+ width: 940px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#cabecalho {
+ border-bottom: 15px solid #0099FF;
+ background: #000066;
+ font-weight: bold;
+ font-family: ‘Lucida Console’, Monaco, monospace;
+ color: #FFF;
+ height: 100px;
+ padding: 5px;
+ border-radius: 2px;
+ font-size: 50px;
+}
+
+.formLabel {
+ font-weight: bold;
+ color: #003366;
+ font-family: Courier, monospace;
+ font-size: 12px;
+}
+
+.formInputText {
+ box-shadow: 1px 1px 1px 1px #eee;
+ color: #003366;
+}
+
+.saveButton {
+ background-image: url(./resources/imagens/icone_salvar.jpg.);
+}
+
+.button {
+ height: 20px;
+ width: 80px;
+ border: 0;
+ box-shadow: 1px 1px 1px 1px #eee;
+ background-color: #0099FF;
+ color: white;
+ font-family: Courier, monospace;
+ font-size: 12px;
+ font-weight: bold;
+ border-radius: 1px;
+}
+
+.panelGrid {
+ padding: 7px;
+ border-radius: 5px solid #0099FF;
+}
+
+fieldset {
+ border-radius: 10px;
+}
+
+legend {
+ background-color: #FFF;
+ border-bottom: 2px solid #0099FF;
+ border-top: 2px solid #0099FF;
+ font-weight: bold;
+ color: #003366;
+ font-family: Courier, monospace;
+}
+
+.panelLeft {
+ width: 300px;
+ margin-top: 20px;
+}
+
+.panelMiddle {
+ width: 600px;
+ position: absolute;
+ left: 550px;
+ top: 103px;
+ ''
+}
+
+.dataTable {
+ position: relative;
+ margin-top: 20px;
+ border: 1px solid #0A1E29;
+}
+
+.cabecalho {
+ text-align: center;
+ font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: Snow;
+ background: #172D3A;
+}
+
+.linha1 {
+ background-color: #B9E9FB;
+}
+
+.linha2 {
+ background-color: #63B6D9;
+}
+
+.colunaId {
+ width: 5px;
+ text-align: center;
+ font-family: Arial, sans-serif;
+ font-size: 12px;
+ font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+}
+
+.coluna2 {
+ text-align: center;
+ font-family: Arial, sans-serif;
+ font-size: 12px;
+}
+
+.coluna3 {
+ text-align: center;
+ font-family: Arial, sans-serif;
+ font-size: 12px;
+}
+
+.colunaEditarExcluir {
+ text-align: center;
+ width: 5px;
+ font-family: Arial, sans-serif;
+ font-size: 12px;
+}

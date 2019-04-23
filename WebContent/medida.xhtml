@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Sistema de Vidraçaria</title>
+</h:head>
+<h:body>
+<ui:composition template="layout.xhtml">
+<ui:define name="content">
+<div id="container">
+<div align="center" >
+<h:form>
+ <p:panel header="Cadastro de Medidas">
+  <p:messages />
+<p:panelGrid columns = "2">
+<h:outputText value="Nome do Cliente: "/>
+<p:inputText value = "#{medidaBean.medida.nome}"/>
+<h:outputText value="Vidro: "/>
+<p:inputText value="#{medidaBean.medida.vidro}"/>
+<h:outputText value="Tamanho 1: "/>
+<p:inputText value="#{medidaBean.medida.tamanhoum}"/>
+<h:outputText value="Tamanho 2: "/>
+<p:inputText value="#{medidaBean.medida.tamanhodois}"/>
+<h:outputText value="Quantidade: "/>
+<p:inputText value="#{medidaBean.medida.quantidade}"/>
+<p:commandButton value="Salvar" action = "#{medidaBean.salva}"/>
+</p:panelGrid>
+</p:panel>
+</h:form> 
+</div>
+</div>
+</ui:define>
+</ui:composition>
+</h:body>
+</html>
